@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/profile_screen/profile_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -80,7 +81,14 @@ class CustomDrawerHeader extends StatelessWidget {
               fontSize: 22.0,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProfileScreen(),
+              ),
+            );
+          },
         ),
       ),
     );
